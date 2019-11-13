@@ -1,7 +1,8 @@
-export default function Characters(characters) {
+export default function Characters(chars) {
+    console.log(chars);
     return `
     <ul> 
-    ${characters
+    ${chars
       .map(character => {
         return `
              <li id="character">
@@ -9,7 +10,7 @@ export default function Characters(characters) {
                 <h3>${character.name}</h3>
                 <h5>Attack Type: ${character.atkType}</h5>
                 <h5>Damage Type: ${character.dmgType}</h5>
-                <p><input class="artist_id" type="hidden" value="${character.id}"></p>
+                <p><input class="character_id" type="hidden" value="${character.id}"></p>
                 <button class="edit-character_submit">Edit</button>
                 <button class="delete-character_submit">Delete</button>
                 </li>
