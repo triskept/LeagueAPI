@@ -8,8 +8,6 @@ export default function Characters(chars) {
              <li id="character">
                 <img src=${character.image}></img>
                 <h3>${character.name}</h3>
-                <h5>Attack Type: ${character.atkType}</h5>
-                <h5>Damage Type: ${character.dmgType}</h5>
                 <p><input class="character_id" type="hidden" value="${character.id}"></p>
                 <button class="charbutton">Edit</button>
                 <button class="charbutton">Delete</button>

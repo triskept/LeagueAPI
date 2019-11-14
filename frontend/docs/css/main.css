@@ -16,7 +16,7 @@
 html {
   font-family: League;
   background-image: linear-gradient(rgba(0, 0, 0, 0.698), rgb(0, 0, 0, 0.698)),
-    url("../images/bg.jpg");
+    url('../images/bg.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -65,7 +65,7 @@ html {
 /* Top and bottom lines */
 .menu-wrap .hamburger > div:before,
 .menu-wrap .hamburger > div:after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 1;
   top: -10px;
@@ -228,6 +228,7 @@ html {
 #character {
   border: 3px solid var(--prim);
   text-align: center;
+  margin-bottom: 5%;
 }
 #character img {
   display: block;
@@ -236,4 +237,5 @@ html {
 #character button {
   background-color: var(--prim);
   border-radius: 1rem;
+  margin-bottom: 5%;
 }
