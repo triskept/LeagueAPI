@@ -1,26 +1,16 @@
+import Position from './Position'
+
 export default function Home() {
   return `
   <div id="homepage">
     <section id="grid">
-        <div id="top" class="position">
-            <img src="./images/TopLane.png"></img>
-            <h3>Top</h3>
-        </div>
-        <div id="jungle" class="position">
+        <div id="characters" class="position">
             <img src="./images/JungleLane.png"></img>
-            <h3>Jungle</h3>
+            <h3>Characters</h3>
         </div>
-        <div id="mid" class="position">
-            <img src="./images/MiddleLane.png"></img>
-            <h3>Mid</h3>
-        </div>
-        <div id="adc" class="position">
-            <img src="./images/ADCLane.png"></img>
-            <h3>ADC</h3>
-        </div>
-        <div id="support" class="position">
-            <img src="./images/SupportLane.png"></img>
-            <h3>Support</h3>
+        <div id="positions" class="position">
+            <img class="top" src="./images/TopLane.png"></img>
+            <h3>Positions</h3>
         </div>
     </section>
 

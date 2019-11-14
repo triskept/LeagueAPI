@@ -1,20 +1,25 @@
-export default function Positions(characters) {
+export default function Position(pos) {
+    console.log(pos);
     return `
-    <ul> 
-    ${characters
-      .map(character => {
-        return `
-             <li id="character">
-                <img src=${character.image}></img>
-                <h3>${character.name}</h3>
-                <h5>Attack Type: ${character.atkType}</h5>
-                <h5>Damage Type: ${character.dmgType}</h5>
-                <p><input class="artist_id" type="hidden" value="${character.id}"></p>
-                <button class="edit-character_submit">Edit</button>
-                <button class="delete-character_submit">Delete</button>
-                </li>
-        `;
-      })  
-      .join("")}
- </ul>
-    `}
+      <ul id="poslist"> 
+      ${pos
+        .map(position => {
+          return `
+               <li class="position">
+                  <img class="posIMG" src=${position.image}></img>
+                  <h3>${position.name}</h3>
+                  <input class="position_id" type="hidden" value="${position.id}">
+                  </li>
+          `;
+        })
+        .join("")}
+   </ul>
+   
+  <section class='add-position'>
+      <input class='add-positionname' type='text' placeholder='Add A New Position!'>
+      <input class='add-positionimg' type='hidden' value='../docs/images/1.png'
+      <button class='add-position_submit'>Submit</button>
+  </section>
+      `;
+  }
+  

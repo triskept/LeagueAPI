@@ -1415,30 +1415,35 @@ namespace LeagueAPI.Context
                     {
                         Id = 1,
                         Name = "Top",
+                        Image = "./images/TopLane.png"
 
                     },
                     new Position()
                     {
                         Id = 2,
                         Name = "Jungle",
+                        Image = "./images/JungleLane.png"
 
                     },
                     new Position()
                     {
                         Id = 3,
                         Name = "Mid",
+                        Image = "./images/MiddleLane.png"
 
                     },
                     new Position()
                     {
                         Id = 4,
                         Name = "ADC",
+                        Image = "./images/ADCLane.png"
 
                     },
                     new Position()
                     {
                         Id = 5,
                         Name = "Support",
+                        Image = "./images/SupportLane.png"
 
                     });
             modelBuilder.Entity<Build>().HasData(

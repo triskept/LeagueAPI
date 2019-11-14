@@ -3,14 +3,16 @@ using LeagueAPI.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LeagueAPI.Migrations
 {
     [DbContext(typeof(LeagueContext))]
-    partial class LeagueContextModelSnapshot : ModelSnapshot
+    [Migration("20191114201926_addpos img")]
+    partial class addposimg
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -9,13 +9,15 @@ namespace LeagueAPI.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Image { get; set; }
 
         public virtual ICollection<Character> Characters { get; set; }
 
-        public Position(int id, string name)
+        public Position(int id, string name, string image)
         {
             Id = id;
             Name = name;
+            Image = image;
         }
         public Position()
         {

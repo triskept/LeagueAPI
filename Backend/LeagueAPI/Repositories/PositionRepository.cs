@@ -15,5 +15,11 @@ namespace LeagueAPI.Repositories
         {
             this.db = context;
         }
+
+        public override Position GetById(int id)
+        {
+            return db.Set<Position>().Where(i => i.Id == id).Include("Characters").FirstOrDefault();
+        }
+
     }
 }
