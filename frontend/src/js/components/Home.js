@@ -1,23 +1,24 @@
-export default function Home(){
-    return `
+export default function Home() {
+  return `
+  <div id="homepage">
     <section id="grid">
-        <div id="top">
+        <div id="top" class="position">
             <img src="./images/TopLane.png"></img>
             <h3>Top</h3>
         </div>
-        <div id="jungle">
+        <div id="jungle" class="position">
             <img src="./images/JungleLane.png"></img>
             <h3>Jungle</h3>
         </div>
-        <div id="mid">
+        <div id="mid" class="position">
             <img src="./images/MiddleLane.png"></img>
             <h3>Mid</h3>
         </div>
-        <div id="adc">
+        <div id="adc" class="position">
             <img src="./images/ADCLane.png"></img>
             <h3>ADC</h3>
         </div>
-        <div id="support">
+        <div id="support" class="position">
             <img src="./images/SupportLane.png"></img>
             <h3>Support</h3>
         </div>
@@ -41,16 +42,24 @@ export default function Home(){
         </div>
     </section>
 
-    <section id="creatorchoice">
-        <div id="creator1">
+    <h1>OP Champs</h1>
+    <section id="grid3">
+        <div id="creator1" class="opchamp">
             <img src="./images/1.png"></img>
         </div>
-        <div id="creator2">
+        <div id="creator2" class="opchamp">
             <img src="./images/2.png"></img>
         </div>
-        <div id="creator3">
+        <div id="creator3" class="opchamp">
             <img src="./images/3.png"></img>
         </div>
+        <div id="creator4" class="opchamp">
+            <img src="./images/4.png"></img>
+        </div>
+        <div id="creator5" class="opchamp">
+            <img src="./images/5.png"></img>
+        </div>
     </section>
-`
+</div>
+`;
 }

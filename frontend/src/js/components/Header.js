@@ -14,5 +14,9 @@ export default function Header(){
       </div> 
     </div>
   </div>
+  <div id="headerpic">
+    <img src="../images/header.png" />
+    <h1>Champion API</h1>
+  </div>
   `
 }

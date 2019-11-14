@@ -4,7 +4,6 @@ import Home from './components/Home'
 import Characters from './components/Characters'
 
 
-
 export default () => {
     pageBuild()
 }

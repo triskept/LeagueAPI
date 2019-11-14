@@ -1,7 +1,7 @@
 export default function Characters(chars) {
-    console.log(chars);
-    return `
-    <ul> 
+  console.log(chars);
+  return `
+    <ul id="charlist"> 
     ${chars
       .map(character => {
         return `
@@ -11,11 +11,11 @@ export default function Characters(chars) {
                 <h5>Attack Type: ${character.atkType}</h5>
                 <h5>Damage Type: ${character.dmgType}</h5>
                 <p><input class="character_id" type="hidden" value="${character.id}"></p>
-                <button class="edit-character_submit">Edit</button>
-                <button class="delete-character_submit">Delete</button>
+                <button class="charbutton">Edit</button>
+                <button class="charbutton">Delete</button>
                 </li>
         `;
-      })  
+      })
       .join("")}
  </ul>
  
