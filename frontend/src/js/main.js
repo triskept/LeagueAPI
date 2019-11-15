@@ -91,6 +91,84 @@ function characterpageNAV() {
       app.innerHTML = Characters(chars);
     });
   });
+  app.addEventListener('click', function(){
+    if(event.target.classList.contains("add-char_submit")){
+        const name = event.target.parentElement.querySelector(
+            ".add-char_charName"
+        ).value;
+        const atkType = event.target.parentElement.querySelector(
+            ".add-char_charatk"
+        ).value;
+        const dmgType = event.target.parentElement.querySelector(
+          ".add-char_chardmg"
+      ).value;
+      const image = event.target.parentElement.querySelector(
+        ".add-char_charimg"
+    ).value;
+        const positionId = event.target.parentElement.querySelector(
+            ".add-char_positionId"
+        ).value;
+        console.log(name, atkType, dmgType, image, positionId);
+        apiActions.postRequest("https://localhost:44323/api/characters",
+        {
+            name: name,
+            atkType: atkType,
+            dmgType: dmgType,
+            image: image,
+            positionId: positionId
+        },
+        chars => {
+            console.log(chars);
+            app.innerHTML = Characters(chars);
+         });
+    }
+});
+app.addEventListener("click", function(){
+  if(event.target.classList.contains("delete-char")){
+      const charID = event.target.parentElement.querySelector(".character_id").value;
+      console.log("delete" + charID)
+      apiActions.deleteRequest(`https://localhost:44323/api/characters/${charID}`,
+      chars => {
+          app.innerHTML = Characters(chars);
+      })
+  }
+});
+app.addEventListener('click', function(){
+  if(event.target.classList.contains("update-char_submit")){
+      const charId = event.target.parentElement.querySelector(
+          ".update-char_id"
+      ).value
+      const name = event.target.parentElement.querySelector(
+          ".update-char_charName"
+      ).value;
+      const atkType = event.target.parentElement.querySelector(
+          ".update-char_charatk"
+      ).value;
+      const dmgType = event.target.parentElement.querySelector(
+          ".update-char_chardmg"
+    ).value;
+    const image = event.target.parentElement.querySelector(
+          ".update-char_charimg"
+  ).value;
+      const positionId = event.target.parentElement.querySelector(
+          ".update-char_positionId"
+      ).value;
+      console.log(charId, name, atkType, dmgType, image, positionId);
+      apiActions.putRequest(`https://localhost:44323/api/characters/${charId}`,
+      {
+          id: charId,
+          name: name,
+          atkType: atkType,
+          dmgType: dmgType,
+          image: image,
+          positionId: positionId
+      },
+      chars => {
+          console.log(chars);
+          app.innerHTML = Characters(chars);
+       });
+  }
+});
 }
 function homeNAV() {
   const homeButton = document.getElementById('home');
