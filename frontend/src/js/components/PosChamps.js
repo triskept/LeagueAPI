@@ -1,10 +1,11 @@
 export default function PosChamps(position){console.log(position)
     return `
-    <article>
+    <article id="individualposheader">
         <img src=${position.image} class="positionIMG"></img>
+        <h1>${position.name}</h1>
         <input class="position_id" type="hidden" value="${position.id}"></input>
     </article>
-    <ul>
+    <ul id="poschampgrid">
         ${position.characters
         .map(character => {
             return `

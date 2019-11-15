@@ -9,7 +9,8 @@ export default function Header(){
           <ul>
             <li><a id="home"><strong>Home</strong></a></li>
             <li><a id="champions"><strong>Champions</strong></a></li>
-          </ul>
+            <li><a id="position"><strong>Position</strong></a></li>
+            </ul>
         </div>
       </div> 
     </div>

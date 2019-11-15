@@ -1,6 +1,9 @@
 export default function Characters(chars) {
   console.log(chars);
   return `
+    <div>
+      <button id="champshortcut"><a href="#shortcutref">Add Champion</a></button>
+    </div>
     <ul id="charlist"> 
     ${chars
       .map(character => {
@@ -14,10 +17,10 @@ export default function Characters(chars) {
             </li>
         `;
       })
-      .join("")}
+      .join('')}
  </ul>
 
- <section class='add-champion'>
+ <section id="shortcutref" class='add-champion'>
  <input class='add-artist_characterName' type='text' placeholder='Add A New Character!'>
  <select class= 'character_atk' name="Attack Type">
      <option value="1">Melee</option>

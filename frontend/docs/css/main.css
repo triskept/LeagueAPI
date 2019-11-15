@@ -1,9 +1,7 @@
 /*CSS Variables*/
 :root {
-  --primary: #ddd;
-  --dark: #333;
-  --light: #fff;
-  --accent: #c97de9;
+  --accent: rgb(200, 170, 110);
+  --footaccent: rgba(200, 170, 110, 0.1);
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
   --prim: rgba(0, 141, 186, 0.75);
   --overlay: rgba(27, 46, 61, 0.835);
@@ -56,7 +54,7 @@ html {
   position: relative;
   width: 100%;
   height: 2px;
-  background-color: white;
+  background-color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +135,7 @@ html {
 }
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
-  color: #fff;
+  color: var(--accent);
   font-size: 1.5rem;
   padding: 1rem;
 }
@@ -160,7 +158,7 @@ html {
   font-size: 2rem;
 }
 #header h1 {
-  color: white;
+  color: var(--accent);
   margin: 0;
 }
 /* wrapper */
@@ -168,41 +166,73 @@ html {
   width: 1200px;
   margin: auto;
 }
-/* position grid */
+/* end of header */
+/* home page */
 #grid {
   display: grid;
-  grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
 }
-.position {
+/* end home page */
+/* position grid */
+#poslist {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0;
+  margin: 6% auto;
+}
+.position,
+.btn {
   display: block;
   margin: 10% auto;
   border: 3px solid white;
-  color: white;
+  color: var(--accent);
   text-align: center;
   width: 200px;
+  margin-bottom: 5rem;
+  box-shadow: var(--shadow);
 }
 .position img {
   width: 136px;
   height: 136px;
 }
 /* end position grid */
-/* button grid */
-#grid2 {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+/* individual position champion page */
+#individualposheader {
+  margin: auto;
   text-align: center;
+  color: var(--accent);
 }
-/* end button grid */
+#individualposheader img {
+  width: 272px;
+  height: 272px;
+}
+#poschampgrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  list-style: none;
+}
+#poschampgrid li {
+  border: 1px solid var(--prim);
+  text-align: center;
+  margin-bottom: 5%;
+  color: var(--accent);
+  box-shadow: var(--shadow);
+}
+#poschampgrid img {
+  margin-top: 3%;
+  box-shadow: var(--shadow);
+}
+/* end of individual position champion page */
 /* OP Champs grid */
 #homepage h1 {
-  color: white;
+  color: var(--accent);
   text-align: center;
   padding: 1rem;
 }
-#grid3 {
+#grid2 {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   text-align: center;
 }
 .opchamp {
@@ -210,6 +240,7 @@ html {
   width: 200px;
   height: 185px;
   border: 3px solid white;
+  box-shadow: var(--shadow);
 }
 .opchamp img {
   display: block;
@@ -223,24 +254,69 @@ html {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   list-style: none;
-  color: white;
+  color: var(--accent);
 }
 #character {
   border: 1px solid var(--prim);
   text-align: center;
   margin-bottom: 5%;
+  box-shadow: var(--shadow);
 }
 #character img {
   display: block;
   margin: 3% auto auto auto;
+  box-shadow: var(--shadow);
 }
 #character button {
   background-color: var(--prim);
   border-radius: 1rem;
   margin-bottom: 5%;
 }
-.add-champion{
-    border: 3px solid var(--prim);
-    width: 416.5px;
-    margin: 5% auto;
+#champshortcut {
+  display: block;
+  background-color: var(--prim);
+  border-radius: 1rem;
+  margin: auto;
+}
+.add-character_submit {
+  border-radius: 1rem;
+  background-color: var(--prim);
+}
+#champshortcut a {
+  text-decoration: none;
+  color: var(--accent);
+}
+#champshortcut a:hover {
+  color: white;
+}
+.add-champion {
+  border: 3px solid var(--prim);
+  width: 431.5px;
+  margin: 5% auto;
+}
+/* end champions page */
+/* individual champion page */
+.maincontent_champ {
+  border: 3px solid white;
+  width: 400px;
+  text-align: center;
+  color: var(--accent);
+  margin: 7% auto;
+}
+.maincontent_champ img {
+  margin-top: 3%;
+  width: 300px;
+  height: 300px;
+}
+.maincontent_champ h3 {
+  text-align: center;
+  color: white;
+}
+
+/* individual champion page */
+/* footer */
+#footer {
+  text-align: center;
+  color: var(--footaccent);
+  margin: 7% auto;
 }
