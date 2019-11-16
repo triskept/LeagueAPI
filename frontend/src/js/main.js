@@ -160,7 +160,7 @@ app.addEventListener('click', function(){
           name: name,
           atkType: atkType,
           dmgType: dmgType,
-          image: image,
+          image: image,cd
           positionId: positionId
       },
       chars => {
