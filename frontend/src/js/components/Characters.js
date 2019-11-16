@@ -25,7 +25,7 @@ export default function Characters(chars) {
      <option value="1">Melee</option>
      <option value="2">Ranged</option>
  </select>    
- <input class="add-char_charimg" type="hidden" value="./images/genericArtist.jpg"></input>
+ <input class="add-char_charimg" type="hidden" value="./images/genChamp.jpg"></input>
  <select class= 'add-char_chardmg' name="Damage Type">
      <option value="1">Attack Damage </option>
      <option value="2">Ability Power</option>

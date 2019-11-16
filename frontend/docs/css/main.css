@@ -222,6 +222,8 @@ html {
 #poschampgrid img {
   margin-top: 3%;
   box-shadow: var(--shadow);
+  max-height: 120px;
+  max-width: 120px;
 }
 /* end of individual position champion page */
 /* OP Champs grid */
@@ -262,25 +264,31 @@ html {
   margin-bottom: 5%;
   box-shadow: var(--shadow);
 }
-#character img {
+#character img, .add-char_charimg {
   display: block;
   margin: 3% auto auto auto;
   box-shadow: var(--shadow);
+  max-width: 120px;
+  max-height: 120px;
+
 }
 #character button {
   background-color: var(--prim);
   border-radius: 1rem;
   margin-bottom: 5%;
+  color: var(--accent);
 }
 #champshortcut {
   display: block;
   background-color: var(--prim);
+  color: var(--accent);
   border-radius: 1rem;
   margin: auto;
 }
-.add-character_submit {
+.add-char_submit, .update-char_submit {
   border-radius: 1rem;
   background-color: var(--prim);
+  color: var(--accent);
 }
 #champshortcut a {
   text-decoration: none;
@@ -289,9 +297,9 @@ html {
 #champshortcut a:hover {
   color: white;
 }
-.add-champion {
+.add-char {
   border: 3px solid var(--prim);
-  width: 431.5px;
+  width: 505px;
   margin: 5% auto;
 }
 /* end champions page */
@@ -307,6 +315,7 @@ html {
   margin-top: 3%;
   width: 300px;
   height: 300px;
+  box-shadow: var(--shadow);
 }
 .maincontent_champ h3 {
   text-align: center;
